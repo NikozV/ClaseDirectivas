@@ -1,1 +1,30 @@
-<p>dashboard works!</p>
+<div class="container">
+    <h1>{{ titulo }}</h1>
+    <br>
+    <!-- <ul>
+        <li *ngFor="let usuario of usuarios">
+            <span *ngIf="usuario.nombre.length >0"> <b>Nombre:</b> {{ usuario.nombre }}</span> <br>
+            <span *ngIf="usuario.apellido.length >0"> <b>Apellido:</b> {{ usuario.apellido }} </span>
+            <hr>
+        </li>
+     </ul> -->
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of usuarios">
+                <td>
+                    <span *ngIf="usuario.nombre.length >0"> {{ usuario.nombre }}</span>
+                </td>
+                <td>
+                    <span *ngIf="usuario.apellido.length >0"> {{ usuario.apellido }} </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
